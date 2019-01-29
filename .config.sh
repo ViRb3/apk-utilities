@@ -3,7 +3,7 @@ export BINDIR="./bin"
 export APKTOOL=$BINDIR/apktool_2.3.4.jar
 export BAKSMALI=$BINDIR/baksmali-2.2.6.jar
 export SMALI=$BINDIR/smali-2.2.6.jar
-export APKSIGNER=$BINDIR/uber-apk-signer-0.8.4.jar
+export APKSIGNER=$BINDIR/uber-apk-signer-1.0.0.jar
 export ENJARIFY=$BINDIR/enjarify.sh
 
 export WORKDIR="./project"
