@@ -8,6 +8,7 @@ A cross-platform collection of scripts and utilities for working with APK files
 * __apktool-build__ - build the `patched apk` from previously decoded `sources`
 * __apktool-decode__ - decode the `input apk` to `sources`
 * __baksmali__ - decompile the `input dex` to `smali`
+* __clean__ - clean the `project` directory
 * __enjarify__ - convert the `input apk` to a `jar`
 * __adb-lp-push__ - push `$1` to the LP data directory
 * __sign__ - sign the `patched apk` to a `signed+patched apk`
