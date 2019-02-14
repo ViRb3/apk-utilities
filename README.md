@@ -10,6 +10,7 @@ A cross-platform collection of scripts and utilities for working with APK files
 * __baksmali__ - decompile the `input dex` to `smali`
 * __clean__ - clean the `project` directory
 * __enjarify__ - convert the `input apk` to a `jar`
+* __adb-lp-pull__ - pull all LP modified files to the project directory
 * __adb-lp-push__ - push `$1` to the LP data directory
 * __sign__ - sign the `patched apk` to a `signed+patched apk`
 * __smali__ - compile the `smali` to a `patched dex`
