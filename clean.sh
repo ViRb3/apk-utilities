@@ -1,4 +1,6 @@
 #!/bin/bash
 . ".config.sh"
 
-rm -rf "$WORKDIR/*"
+cd "$WORKDIR"
+rm -rf *
+cd - > /dev/null
