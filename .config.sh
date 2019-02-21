@@ -7,6 +7,7 @@ export APKSIGNER=$BINDIR/uber-apk-signer-1.0.0.jar
 export ENJARIFY=$BINDIR/enjarify.sh
 
 export WORKDIR="project"
+export LPDIR="/sdcard/Android/data/___.lp/files/LuckyPatcher/"
 
 # is running under WSL?
 if [ $(uname -r | grep "Microsoft") ]
