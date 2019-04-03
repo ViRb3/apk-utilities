@@ -1,5 +1,6 @@
 #!/bin/bash
 . ".config.sh"
+DEST="$WORKDIR/app.apk"
 
 $ADB shell 'pm list packages' | sed 's/.*://' | sort
 echo
@@ -12,4 +13,5 @@ if [ -z "$BASE" ]; then
 fi
 
 mkdir -p "$WORKDIR"
-$ADB pull "$BASE" "$WORKDIR/app.apk"
+$ADB pull "$BASE" "$DEST"
+echo "Saved to: $DEST"
