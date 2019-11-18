@@ -86,6 +86,7 @@ def main():
     try:
         outfile = open(outname, mode=('wb' if args.force else 'xb'))
     except FileExistsError:
+        print('Attempting to write to', outname)
         print('Error, output file already exists and --force was not specified.')
         print('To overwrite the output file, pass -f or --force.')
         return
