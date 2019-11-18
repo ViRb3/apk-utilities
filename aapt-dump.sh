@@ -8,4 +8,6 @@ if ! [ -f "$WORKDIR/app.apk" ]; then
 fi
 
 $AAPT l -a "$WORKDIR/app.apk" > "$DEST"
+
+check_status
 echo "Saved to: $DEST"

@@ -22,3 +22,10 @@ else
     export JAVA="java"
     export ADB="adb"
 fi
+
+check_status () {
+    if [ $? -ne 0 ]; then
+        echo "Error encountered"
+        exit 2
+    fi
+}

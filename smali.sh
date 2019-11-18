@@ -9,4 +9,6 @@ fi
 
 rm "$DEST" 2&> /dev/null
 $JAVA -jar $SMALI a -o "$DEST" "$WORKDIR/smali"
+
+check_status
 echo "Saved to: $DEST"

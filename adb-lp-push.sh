@@ -7,4 +7,6 @@ if [ -z "$1" ]; then
 fi
 
 $ADB push "$1" "$LPDIR"
+
+check_status
 echo "Pushed to: $LPDIR"

@@ -9,4 +9,6 @@ fi
 
 rm "$DEST" 2&> /dev/null
 $ENJARIFY -o "$DEST" "$WORKDIR/app.apk"
+
+check_status
 echo "Saved to: $DEST"

@@ -9,4 +9,6 @@ fi
 
 rm "$DEST" 2&> /dev/null
 $JAVA -jar $APKSIGNER -a "$WORKDIR/app-patched.apk"
+
+check_status
 echo "Saved to: $DEST"

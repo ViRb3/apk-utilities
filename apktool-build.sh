@@ -9,4 +9,6 @@ fi
 
 rm "$DEST" 2&> /dev/null
 $JAVA -jar $APKTOOL b -o "$DEST" "$WORKDIR/sources"
+
+check_status
 echo "Saved to: $DEST"

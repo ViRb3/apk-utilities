@@ -8,4 +8,6 @@ if ! [ -f "$DEST" ]; then
 fi
 
 $ADB install "$DEST"
+
+check_status
 echo "Installed $DEST"

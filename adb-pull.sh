@@ -14,4 +14,6 @@ fi
 
 mkdir -p "$WORKDIR"
 $ADB pull "$BASE" "$DEST"
+
+check_status
 echo "Saved to: $DEST"
