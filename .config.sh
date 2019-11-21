@@ -23,6 +23,7 @@ else
     export ADB="adb"
 fi
 
+# check if status is non-zero (error)
 check_status () {
     if [ $? -ne 0 ]; then
         echo "Error encountered"
@@ -30,6 +31,7 @@ check_status () {
     fi
 }
 
+# check if file exists
 check_file () {
     if ! [ -f "$1" ]; then
         echo "$2"
@@ -37,6 +39,7 @@ check_file () {
     fi
 }
 
+# check if directory exists
 check_directory () {
     if ! [ -d "$1" ]; then
         echo "$2"
@@ -44,6 +47,7 @@ check_directory () {
     fi
 }
 
+# check if argument is empty
 check_empty () {
     if [ -z "$1" ]; then
         echo "$2"
