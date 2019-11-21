@@ -1,10 +1,7 @@
 #!/bin/bash
 . ".config.sh"
 
-if [ -z "$1" ]; then
-    echo "No input file!"
-    exit 1
-fi
+check_empty "$1" "No input file!"
 
 $ADB push "$1" "$LPDIR"
 

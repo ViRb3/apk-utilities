@@ -2,10 +2,7 @@
 . ".config.sh"
 DEST="$WORKDIR/smali"
 
-if ! [ -f "$WORKDIR/classes.dex" ]; then
-    echo "classes.dex not found! Place your input file there."
-    exit 1
-fi
+check_file "$WORKDIR/classes.dex" "classes.dex not found! Place your input file there."
 
 rm -rf "$DEST" 2&> /dev/null
 $JAVA -jar $BAKSMALI d --use-locals -o "$DEST" "$WORKDIR/classes.dex"

@@ -2,10 +2,7 @@
 . ".config.sh"
 DEST="$WORKDIR/app-patched-aligned-debugSigned.apk"
 
-if ! [ -f "$DEST" ]; then
-    echo "app-patched-aligned-debugSigned.apk not found! Run sign first."
-    exit 1
-fi
+check_file "$DEST" "app-patched-aligned-debugSigned.apk not found! Run sign first."
 
 $ADB install "$DEST"
 

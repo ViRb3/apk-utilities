@@ -29,3 +29,24 @@ check_status () {
         exit 2
     fi
 }
+
+check_file () {
+    if ! [ -f "$1" ]; then
+        echo "$2"
+        exit 1
+    fi
+}
+
+check_directory () {
+    if ! [ -d "$1" ]; then
+        echo "$2"
+        exit 1
+    fi
+}
+
+check_empty () {
+    if [ -z "$1" ]; then
+        echo "$2"
+        exit 1
+    fi
+}

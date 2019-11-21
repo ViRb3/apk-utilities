@@ -7,10 +7,7 @@ echo
 read -p 'Package to pull: ' PKG
 BASE=$($ADB shell pm path ${PKG} | awk -F':' '{print $2}' | tr -d '\r' | tr -d '\n')
 
-if [ -z "$BASE" ]; then
-    echo "Invalid package!"
-    exit 1
-fi
+check_empty "$BASE" "Invalid package!"
 
 mkdir -p "$WORKDIR"
 $ADB pull "$BASE" "$DEST"

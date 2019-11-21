@@ -2,10 +2,7 @@
 . ".config.sh"
 DEST="$WORKDIR/app-enjarify.jar"
 
-if ! [ -f "$WORKDIR/app.apk" ]; then
-    echo "app.apk not found! Place your input file there."
-    exit 1
-fi
+check_file "$WORKDIR/app.apk" "app.apk not found! Place your input file there."
 
 rm "$DEST" 2&> /dev/null
 $ENJARIFY -o "$DEST" "$WORKDIR/app.apk"
