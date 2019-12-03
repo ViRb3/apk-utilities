@@ -4,8 +4,10 @@ Sample patch
 [PACKAGE]
 [CLASSES]
 
-{"original":"12 34 56 78"}
-{"replaced":"87 65 43 21"}
+// Patch comment
+
+{"original":"12 34 ?? 78"}
+{"replaced":"87 ?? 43 21"}
 
 [END]
 Done
