@@ -16,11 +16,13 @@ then
     export AAPT="aapt.exe"
     export JAVA="java.exe"
     export ADB="adb.exe"
+    export DX="dx.exe"
 else
     export ADB="adb"
     export AAPT="aapt"
     export JAVA="java"
     export ADB="adb"
+    export DX="dx"
 fi
 
 # check if status is non-zero (error)

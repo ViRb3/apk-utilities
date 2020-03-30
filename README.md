@@ -11,6 +11,7 @@ A cross-platform suite of scripts and utilities for working with APK files
 * __baksmali__ - decompile the `input dex` to `smali`
 * __aapt-dump__ - dump Android-specific data (resources, manifest) from the `input apk`
 * __enjarify__ - convert the `input apk` to a `jar`
+* __dexify__ - convert the `input jar` to a `dex`
 ### Build
 * __apktool-build__ - build the `patched apk` from previously decoded `sources`
 * __smali__ - compile the `smali` to a `patched dex`
@@ -22,6 +23,7 @@ A cross-platform suite of scripts and utilities for working with APK files
 ## Usage
 Clone this repo and use the `.sh` scripts at its root. For a clean workflow, all scripts operate under the `project` directory. Inside there, you can place:
 * `app.apk` - the input apk
+* `app.jar` - the input jar
 * `classes.dex` - the input dex
 
 ## Example workflow
