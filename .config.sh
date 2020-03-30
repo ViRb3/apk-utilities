@@ -16,7 +16,7 @@ then
     export AAPT="aapt.exe"
     export JAVA="java.exe"
     export ADB="adb.exe"
-    export DX="dx.exe"
+    export DX="cmd.exe /c dx.bat"
 else
     export ADB="adb"
     export AAPT="aapt"
