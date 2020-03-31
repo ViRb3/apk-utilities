@@ -1,11 +1,12 @@
 #!/bin/bash
 . ".config.sh"
+SRC="$WORKDIR/app-patched.apk"
 DEST="$WORKDIR/app-patched-aligned-debugSigned.apk"
 
-check_file "$WORKDIR/app-patched.apk" "app-patched.apk not found! Run apktool-build first."
+check_file "$SRC" "$SRC not found! Run apktool-build first."
 
 rm "$DEST" 2&> /dev/null
-$JAVA -jar $APKSIGNER -a "$WORKDIR/app-patched.apk"
+$JAVA -jar $APKSIGNER -a "$SRC"
 
 check_status
 echo "Saved to: $DEST"

@@ -1,10 +1,11 @@
 #!/bin/bash
 . ".config.sh"
+SRC="$WORKDIR/app.apk"
 DEST="$WORKDIR/dump.txt"
 
-check_file "$WORKDIR/app.apk" "app.apk not found! Place your input file there."
+check_file "$SRC" "$SRC not found! Place your input file there."
 
-$AAPT l -a "$WORKDIR/app.apk" > "$DEST"
+$AAPT l -a "$SRC" > "$DEST"
 
 check_status
 echo "Saved to: $DEST"
