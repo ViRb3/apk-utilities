@@ -1,6 +1,6 @@
 #!/bin/bash
 . ".config.sh"
-DEST="$WORKDIR/app.dex"
+DEST="$WORKDIR/classes.dex"
 
 check_file "$WORKDIR/app.jar" "app.jar not found! Place your input file there."
 
