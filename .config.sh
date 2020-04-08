@@ -1,8 +1,8 @@
 #!/bin/bash
 export BINDIR="bin"
-export APKTOOL=$BINDIR/apktool_2.4.0.jar
-export BAKSMALI=$BINDIR/baksmali-2.3.4.jar
-export SMALI=$BINDIR/smali-2.3.4.jar
+export APKTOOL=$BINDIR/apktool_2.4.1.jar
+export BAKSMALI=$BINDIR/baksmali-2.4.0.jar
+export SMALI=$BINDIR/smali-2.4.0.jar
 export APKSIGNER=$BINDIR/uber-apk-signer-1.1.0.jar
 export ENJARIFY=$BINDIR/enjarify.sh
 
