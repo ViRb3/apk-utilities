@@ -13,8 +13,8 @@ A cross-platform suite of scripts and utilities for working with APK files
 * __enjarify__ - convert an `apk` to a `jar`
 * __dexify__ - convert a `jar` to a `dex`
 ### Build
-* __apktool-build__ - build a `patched apk` from previously decoded `sources`
-* __smali__ - build a `patched dex` from previously decompiled `smali`
+* __apktool-build__ - build previously decoded `sources` to a `patched apk` 
+* __smali__ - build previously decompiled `smali` to a `patched dex`
 * __sign__ - sign a `patched apk` to a `signed apk`
 ### Push
 * __adb-install__ - install an `apk` file
