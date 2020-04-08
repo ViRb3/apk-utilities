@@ -28,7 +28,7 @@ Clone this repo and use the `.sh` scripts at its root. For a clean workflow, all
 * adb-pull > apktool-decode > *make changes* > apktool-build > sign > adb-install
 
 ## Installation
-You need [bash](https://www.gnu.org/software/bash/) installed and accessible under `/bin/bash`. On Windows you can use [WSL](https://docs.microsoft.com/en-us/windows/wsl/), the scripts will detect that and still use the native Windows binaries
+You need [bash](https://www.gnu.org/software/bash/) installed and accessible under `/bin/bash`. On Windows you can use [WSL](https://docs.microsoft.com/en-us/windows/wsl/), the scripts will detect that and still use the native Windows binaries.
 
 If you want to use the `aapt-*` and `adb-*` scripts, then you also need to install the [Android SDK](https://developer.android.com/studio/#downloads
 ). In Ubuntu, there is an official package `android-sdk`. Make sure the following directories are added to your `PATH`:
