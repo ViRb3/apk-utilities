@@ -22,7 +22,7 @@ A cross-platform suite of scripts and utilities for working with APK files
 * __adb-lp-push__ - push `files` to the LP data directory
 
 ## Usage
-Clone this repo and use the `.sh` scripts at its root. For a clean workflow, all scripts operate under the `project` directory. Inside there, you can place:
+Clone this repo and use the `.sh` scripts at its root. For a clean workflow, all scripts operate under the `project` directory.
 
 ## Example workflow
 * adb-pull > apktool-decode > *make changes* > apktool-build > sign > adb-install
