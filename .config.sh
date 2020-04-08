@@ -56,3 +56,22 @@ check_empty () {
         exit 1
     fi
 }
+
+# asks the user to select input file
+# $1 - search directory
+# $2 - input file glob
+select_file () {
+    # set the prompt used by select, replacing "#?"
+    PS3="Select input number: "
+    select filename in $(ls -d "$1"/$2)
+    do
+        if [[ "$filename" == "" ]]
+        then
+            echo "'$REPLY' is not a valid choice" > /dev/tty
+            continue
+        fi
+
+        echo "$filename"
+        return
+    done
+}

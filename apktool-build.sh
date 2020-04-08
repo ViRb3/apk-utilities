@@ -1,9 +1,7 @@
 #!/bin/bash
 . ".config.sh"
-SRC="$WORKDIR/sources"
-DEST="$WORKDIR/app-patched.apk"
-
-check_directory "$SRC" "$SRC directory not found! Run apktool-decode first."
+SRC=$(select_file "$WORKDIR" "*-sources")
+DEST="$WORKDIR/$(basename "$SRC" -sources)-patched.apk"
 
 rm "$DEST" 2&> /dev/null
 $JAVA -jar $APKTOOL b -o "$DEST" "$SRC"

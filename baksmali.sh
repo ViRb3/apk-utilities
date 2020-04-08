@@ -1,9 +1,7 @@
 #!/bin/bash
 . ".config.sh"
-SRC="$WORKDIR/classes.dex"
-DEST="$WORKDIR/smali"
-
-check_file "$SRC" "$SRC not found! Place your input file there."
+SRC=$(select_file "$WORKDIR" "*.dex")
+DEST="$WORKDIR/$(basename "$SRC" .dex)-smali"
 
 rm -rf "$DEST" 2&> /dev/null
 $JAVA -jar $BAKSMALI d --use-locals -o "$DEST" "$SRC"

@@ -1,9 +1,7 @@
 #!/bin/bash
 . ".config.sh"
-SRC="$WORKDIR/smali"
-DEST="$WORKDIR/classes-patched.dex"
-
-check_directory "$SRC" "$SRC directory not found! Run baksmali first."
+SRC=$(select_file "$WORKDIR" "*-smali")
+DEST="$WORKDIR/$(basename "$SRC" -smali)-patched.dex"
 
 rm "$DEST" 2&> /dev/null
 $JAVA -jar $SMALI a -o "$DEST" "$SRC"

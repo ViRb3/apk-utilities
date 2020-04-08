@@ -1,9 +1,7 @@
 #!/bin/bash
 . ".config.sh"
-SRC="$WORKDIR/app.apk"
-DEST="$WORKDIR/dump.txt"
-
-check_file "$SRC" "$SRC not found! Place your input file there."
+SRC=$(select_file "$WORKDIR" "*.apk")
+DEST="$WORKDIR/$(basename "$SRC" .apk)-aapt.txt"
 
 $AAPT l -a "$SRC" > "$DEST"
 

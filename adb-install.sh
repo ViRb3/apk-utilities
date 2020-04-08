@@ -1,10 +1,8 @@
 #!/bin/bash
 . ".config.sh"
-SRC="$WORKDIR/app-patched-aligned-debugSigned.apk"
-
-check_file "$SRC" "$SRC not found! Run sign first."
+SRC=$(select_file "$WORKDIR" "*.apk")
 
 $ADB install "$SRC"
 
 check_status
-echo "Installed $SRC"
+echo "Installed: $SRC"

@@ -3,28 +3,26 @@ A cross-platform suite of scripts and utilities for working with APK files
 
 ## Features
 ### Pull
-* __adb-pull__ - pull an apk from a connected device to `input apk`
-* __adb-lp-pull__ - pull all LP modified files to the project directory
+* __adb-pull__ - pull an app's APK files from a connected device to the `project` directory
+* __adb-lp-pull__ - pull all LP modified files to the `project` directory
 * __clean__ - clean the `project` directory 
 ### Extract
-* __apktool-decode__ - decode the `input apk` to `sources`
-* __baksmali__ - decompile the `input dex` to `smali`
-* __aapt-dump__ - dump Android-specific data (resources, manifest) from the `input apk`
-* __enjarify__ - convert the `input apk` to a `jar`
-* __dexify__ - convert the `input jar` to a `dex`
+* __apktool-decode__ - decode an `apk` to `sources`
+* __baksmali__ - decompile a `dex` to `smali`
+* __aapt-dump__ - dump Android-specific data (resources, manifest) from an `apk`
+* __enjarify__ - convert an `apk` to a `jar`
+* __dexify__ - convert a `jar` to a `dex`
 ### Build
-* __apktool-build__ - build the `patched apk` from previously decoded `sources`
-* __smali__ - compile the `smali` to a `patched dex`
-* __sign__ - sign the `patched apk` to a `signed+patched apk`
+* __apktool-build__ - build a `patched apk` from previously decoded `sources`
+* __smali__ - build a `patched dex` from previously decompiled `smali`
+* __sign__ - sign a `patched apk` to a `signed apk`
 ### Push
-* __adb-install__ - install the `patched+signed apk`
-* __adb-lp-push__ - push `$1` to the LP data directory
+* __adb-install__ - install an `apk` file
+* __adb-install-multiple__ - install multiple `apk` files
+* __adb-lp-push__ - push `files` to the LP data directory
 
 ## Usage
 Clone this repo and use the `.sh` scripts at its root. For a clean workflow, all scripts operate under the `project` directory. Inside there, you can place:
-* `app.apk` - the input apk
-* `app.jar` - the input jar
-* `classes.dex` - the input dex
 
 ## Example workflow
 * adb-pull > apktool-decode > *make changes* > apktool-build > sign > adb-install
