@@ -10,7 +10,7 @@ export WORKDIR="project"
 export LPDIR="/sdcard/Android/data/___.lp/files/LuckyPatcher/"
 
 # is running under WSL?
-if [ $(uname -r | grep "Microsoft") ]
+if [ $(uname -r | grep -i "microsoft") ]
 then
     export ADB="adb.exe"
     export AAPT="aapt.exe"
