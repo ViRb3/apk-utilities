@@ -26,7 +26,6 @@ APKS=$($ADB shell pm path "$RESULT")
 
 for APK in $APKS; do
     APK=$(echo "$APK" | awk -F ':' '{print $2}' | tr -d '\r' | tr -d '\n')
-    check_empty "$APK" "Invalid package!"
     $ADB pull "$APK" "$DEST"
 done
 

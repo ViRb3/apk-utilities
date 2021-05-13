@@ -26,14 +26,6 @@ else
     export DX="dx"
 fi
 
-# check if argument is empty
-check_empty() {
-    if [ -z "$1" ]; then
-        echo "$2"
-        exit 1
-    fi
-}
-
 # asks the user to select input file
 # $1 - search directory
 # $2 - input file glob
