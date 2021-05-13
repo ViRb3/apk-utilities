@@ -28,7 +28,6 @@ for APK in $APKS; do
     APK=$(echo "$APK" | awk -F ':' '{print $2}' | tr -d '\r' | tr -d '\n')
     check_empty "$APK" "Invalid package!"
     $ADB pull "$APK" "$DEST"
-    check_status
 done
 
 echo "Saved to: $DEST"

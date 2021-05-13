@@ -5,5 +5,4 @@ DEST="$WORKDIR/$(basename "$SRC" .apk)-aapt.txt"
 
 $AAPT l -a "$SRC" >"$DEST"
 
-check_status
 echo "Saved to: $DEST"

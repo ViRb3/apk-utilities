@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 export BINDIR="bin"
 export APKTOOL=$BINDIR/apktool_2.5.0.jar
 export BAKSMALI=$BINDIR/baksmali-2.5.2.jar
@@ -23,14 +25,6 @@ else
     export ADB="adb"
     export DX="dx"
 fi
-
-# check if status is non-zero (error)
-check_status() {
-    if [ $? -ne 0 ]; then
-        echo "Error encountered"
-        exit 2
-    fi
-}
 
 # check if file exists
 check_file() {
