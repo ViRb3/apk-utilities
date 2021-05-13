@@ -10,8 +10,7 @@ export WORKDIR="project"
 export LPDIR="/sdcard/Android/data/___.lp/files/LuckyPatcher/"
 
 # is running under WSL?
-if [ $(uname -r | grep -i "microsoft") ]
-then
+if [ $(uname -r | grep -i "microsoft") ]; then
     export ADB="adb.exe"
     export AAPT="aapt.exe"
     export JAVA="java.exe"
@@ -26,7 +25,7 @@ else
 fi
 
 # check if status is non-zero (error)
-check_status () {
+check_status() {
     if [ $? -ne 0 ]; then
         echo "Error encountered"
         exit 2
@@ -34,7 +33,7 @@ check_status () {
 }
 
 # check if file exists
-check_file () {
+check_file() {
     if ! [ -f "$1" ]; then
         echo "$2"
         exit 1
@@ -42,7 +41,7 @@ check_file () {
 }
 
 # check if directory exists
-check_directory () {
+check_directory() {
     if ! [ -d "$1" ]; then
         echo "$2"
         exit 1
@@ -50,7 +49,7 @@ check_directory () {
 }
 
 # check if argument is empty
-check_empty () {
+check_empty() {
     if [ -z "$1" ]; then
         echo "$2"
         exit 1
@@ -60,14 +59,12 @@ check_empty () {
 # asks the user to select input file
 # $1 - search directory
 # $2 - input file glob
-select_file () {
+select_file() {
     # set the prompt used by select, replacing "#?"
     PS3="Select input number: "
-    select filename in $(ls -d "$1"/$2)
-    do
-        if [[ "$filename" == "" ]]
-        then
-            echo "'$REPLY' is not a valid choice" > /dev/tty
+    select filename in $(ls -d "$1"/$2); do
+        if [[ "$filename" == "" ]]; then
+            echo "'$REPLY' is not a valid choice" >/dev/tty
             continue
         fi
 

@@ -3,7 +3,7 @@
 SRC=$(select_file "$WORKDIR" "*-patched.apk")
 DEST="$WORKDIR/$(basename "$SRC" -patched.apk)-patched-signed.apk"
 
-rm "$DEST" 2&> /dev/null
+rm "$DEST" 2 &>/dev/null
 $JAVA -jar $APKSIGNER -a "$SRC" "$@"
 
 check_status
