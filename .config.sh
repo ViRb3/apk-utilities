@@ -26,22 +26,6 @@ else
     export DX="dx"
 fi
 
-# check if file exists
-check_file() {
-    if ! [ -f "$1" ]; then
-        echo "$2"
-        exit 1
-    fi
-}
-
-# check if directory exists
-check_directory() {
-    if ! [ -d "$1" ]; then
-        echo "$2"
-        exit 1
-    fi
-}
-
 # check if argument is empty
 check_empty() {
     if [ -z "$1" ]; then
@@ -54,9 +38,15 @@ check_empty() {
 # $1 - search directory
 # $2 - input file glob
 select_file() {
+    SELECT_DIR="\"$1\"/$2"
+    RESULTS=$(eval ls -d $SELECT_DIR 2>/dev/null)
+    if [ -z "$RESULTS" ]; then
+        echo "Error: No matches for '$SELECT_DIR'" >&2
+        exit 1
+    fi
     # set the prompt used by select, replacing "#?"
     PS3="Select input number: "
-    select filename in $(ls -d "$1"/$2); do
+    select filename in $RESULTS; do
         if [[ "$filename" == "" ]]; then
             echo "'$REPLY' is not a valid choice" >/dev/tty
             continue
