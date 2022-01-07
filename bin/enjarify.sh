@@ -35,15 +35,7 @@ if [ -z "$PYTHON" ]; then
 else
 	echo "Using $PYTHON as Python interpreter"
 
-	# Find location of this bash script, and set its directory as the PYTHONPATH
-	if [[ "$OSTYPE" == "darwin"* ]]; then
-		READLINK="readlink"
-	else
-		READLINK="readlink -f"
-	fi
-
-	export PYTHONPATH=$(dirname "$($READLINK "${BASH_SOURCE[0]}")")
-
+	export PYTHONPATH=$(dirname "${BASH_SOURCE[0]}")
 	# Now execute the actual program
 	exec $PYTHON -O -m enjarify.main "$@"
 fi
