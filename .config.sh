@@ -2,7 +2,7 @@
 set -e
 
 export BINDIR="bin"
-export APKTOOL=$BINDIR/apktool_2.7.0.jar
+export APKTOOL=$BINDIR/apktool_2.8.1.jar
 export BAKSMALI=$BINDIR/baksmali-2.5.2.jar
 export SMALI=$BINDIR/smali-2.5.2.jar
 export APKSIGNER=$BINDIR/uber-apk-signer-1.3.0.jar
