@@ -40,3 +40,4 @@ If you want to use the `aapt-*` and `adb-*` scripts, then you also need to insta
 * [smali/baksmali](https://github.com/JesusFreke/smali)
 * [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer)
 * [enjarify](https://github.com/Storyyeller/enjarify)
+* [frida-android-unpinning](https://github.com/httptoolkit/frida-android-unpinning)
