@@ -6,6 +6,7 @@ A cross-platform suite of scripts and utilities for working with APK files
 * __adb-pull__ - pull an app's APK files from a connected device to the `project` directory
 * __adb-lp-pull__ - pull all LP modified files to the `project` directory
 * __clean__ - clean the `project` directory 
+* __merge__ - merge APK files into a single APK file 
 ### Extract
 * __apktool-decode__ - decode an `apk` to `sources`
 * __baksmali__ - decompile a `dex` to `smali`
@@ -41,3 +42,4 @@ If you want to use the `aapt-*` and `adb-*` scripts, then you also need to insta
 * [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer)
 * [enjarify](https://github.com/Storyyeller/enjarify)
 * [frida-android-unpinning](https://github.com/httptoolkit/frida-android-unpinning)
+* [APKEditor](https://github.com/REAndroid/APKEditor)
