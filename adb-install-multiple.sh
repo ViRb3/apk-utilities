@@ -1,6 +1,6 @@
 #!/bin/bash
 . ".config.sh"
 
-$ADB install-multiple "$@"
+"$ADB" install-multiple "$@"
 
 echo "Installed: $@"

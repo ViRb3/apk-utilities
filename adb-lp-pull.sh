@@ -2,6 +2,6 @@
 . ".config.sh"
 DEST="$WORKDIR/Modified"
 
-$ADB pull --sync "/sdcard/Android/data/___.lp/files/LuckyPatcher/Modified" "$DEST"
+"$ADB" pull --sync "$LPDIR/Modified" "$DEST"
 
 echo "Saved to: $DEST"
