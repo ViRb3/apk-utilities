@@ -2,12 +2,12 @@
 set -e
 
 export BINDIR="bin"
-export APKTOOL=$BINDIR/apktool_2.8.1.jar
+export APKTOOL=$BINDIR/apktool_2.12.0.jar
 export BAKSMALI=$BINDIR/baksmali-2.5.2.jar
 export SMALI=$BINDIR/smali-2.5.2.jar
 export APKSIGNER=$BINDIR/uber-apk-signer-1.3.0.jar
 export ENJARIFY=$BINDIR/enjarify.sh
-export APKEDITOR=$BINDIR/APKEditor-1.2.7.jar
+export APKEDITOR=$BINDIR/APKEditor-1.4.5.jar
 
 export WORKDIR="project"
 export LPDIR="/sdcard/Android/data/___.lp/files/LuckyPatcher/"
